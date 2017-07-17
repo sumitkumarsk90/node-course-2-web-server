@@ -50,6 +50,15 @@ app.get('/about', (req, res) => {
 	});
 });
 
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs',{
+		ageTitle: "About Page bro",
+		currentYear : new Date().getFullYear(),
+		welcomeMsg: "Welcome to the party",
+		portfolioMsg : 'Portfolio Page here'
+	});
+});
+
 app.get('/bad', (req, res) => {
 	res.send({
 		message : "Some Error is happening",
